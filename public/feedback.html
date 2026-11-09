@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Feedback | Student Portfolio</title><link rel="stylesheet" href="styles.css"><script src="feedback.js" defer></script></head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">SP</span><span>Student<span class="brand-light">Portfolio</span></span></a><nav><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="feedback.html">Feedback</a></nav></header>
+<main class="container feedback-layout">
+  <section class="feedback-intro"><p class="eyebrow">WE VALUE YOUR THOUGHTS</p><h1>Help us make<br><span>things better.</span></h1><p class="hero-copy">Your feedback helps us understand what works well and what we can improve.</p><div class="feedback-points"><p><span>✦</span> Share your experience</p><p><span>✦</span> Suggest a new feature</p><p><span>✦</span> Help improve the system</p></div></section>
+  <form id="feedback-form" class="panel feedback-panel">
+    <p class="eyebrow">FEEDBACK FORM</p><h2>Send us a message</h2><p class="muted">Fields marked with * are required.</p>
+    <label>Your name <b>*</b><input name="student_name" required maxlength="100" placeholder="Enter your name"></label>
+    <label>Email address <b>*</b><input name="email" type="email" required placeholder="name@example.com"></label>
+    <label>How would you rate your experience? <b>*</b><select name="rating" required><option value="">Choose a rating</option><option value="5">5 – Excellent</option><option value="4">4 – Very good</option><option value="3">3 – Good</option><option value="2">2 – Fair</option><option value="1">1 – Needs improvement</option></select></label>
+    <label>Feedback category <b>*</b><select name="category" required><option value="">Select a category</option><option>Website design</option><option>Ease of use</option><option>Features</option><option>Technical issue</option><option>Suggestion</option><option>Other</option></select></label>
+    <label>Your comments <b>*</b><textarea name="comments" rows="5" required minlength="5" maxlength="1500" placeholder="Write your feedback or suggestion here…"></textarea></label>
+    <button class="button button-primary button-full" type="submit">Submit feedback <span>→</span></button>
+    <p id="feedback-message" class="form-message" role="status"></p>
+  </form>
+</main><footer><span>© 2026 Student Portfolio Management System</span><span>Designed for student growth.</span></footer>
+</body></html>

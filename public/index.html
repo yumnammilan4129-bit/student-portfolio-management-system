@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio | Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">SP</span><span>Student<span class="brand-light">Portfolio</span></span></a>
+    <nav><a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="feedback.html">Feedback</a></nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR JOURNEY. YOUR ACHIEVEMENTS.</p>
+        <h1>Build a portfolio<br><span>that tells your story.</span></h1>
+        <p class="hero-copy">Keep your academic details, skills, projects and achievements organised in one place.</p>
+        <a class="button button-light" href="#student-form">Create your portfolio <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card art-card-back"></div>
+        <div class="art-card art-card-front"><div class="avatar">✦</div><div class="art-line wide"></div><div class="art-line"></div><div class="art-pills"><i></i><i></i><i></i></div><div class="art-chart"><b></b><b></b><b></b><b></b><b></b></div></div>
+        <div class="floating-note">✧ Student growth</div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card"><span class="stat-icon">▤</span><div><strong id="total-students">0</strong><small>Portfolios created</small></div></article>
+      <article class="stat-card"><span class="stat-icon">✦</span><div><strong>All in one place</strong><small>Skills, projects & achievements</small></div></article>
+      <article class="stat-card"><span class="stat-icon">✓</span><div><strong>Easy to manage</strong><small>Add, view, edit and delete</small></div></article>
+    </section>
+
+    <section class="section-heading" id="student-form">
+      <div><p class="eyebrow">PORTFOLIO BUILDER</p><h2>Student information</h2><p class="muted">Fill in the details below to create or update a student portfolio.</p></div>
+      <span class="section-tag">01 / PROFILE</span>
+    </section>
+
+    <form id="student-form-element" class="panel">
+      <input type="hidden" id="student-id">
+      <div class="form-section-title"><span>1</span><div><h3>Personal details</h3><p>Basic information about the student</p></div></div>
+      <div class="form-grid">
+        <label>Full name <b>*</b><input id="full_name" name="full_name" required maxlength="100" placeholder="Enter your full name"></label>
+        <label>Register number <b>*</b><input id="register_no" name="register_no" required maxlength="30" placeholder="e.g. 26CS001"></label>
+        <label>Email address <b>*</b><input id="email" name="email" type="email" required placeholder="name@example.com"></label>
+        <label>Phone number<input id="phone" name="phone" type="tel" placeholder="Enter phone number"></label>
+      </div>
+
+      <div class="form-section-title"><span>2</span><div><h3>Academic details</h3><p>Your current course and academic information</p></div></div>
+      <div class="form-grid">
+        <label>Course<input id="course" name="course" placeholder="e.g. B.Sc. Computer Science"></label>
+        <label>Department<input id="department" name="department" placeholder="e.g. Computer Science"></label>
+        <label>Current semester<input id="semester" name="semester" placeholder="e.g. Semester 3"></label>
+        <label>Academic year<input id="academic_year" name="academic_year" placeholder="e.g. 2026–2027"></label>
+        <label>CGPA / Percentage<input id="cgpa" name="cgpa" placeholder="e.g. 8.5 CGPA"></label>
+      </div>
+
+      <div class="form-section-title"><span>3</span><div><h3>Skills and achievements</h3><p>Highlight what you have learned and accomplished</p></div></div>
+      <div class="form-grid">
+        <label class="full-width">Skills<textarea id="skills" name="skills" rows="3" placeholder="e.g. HTML, CSS, JavaScript, communication"></textarea><small>Separate different skills with commas.</small></label>
+        <label class="full-width">Achievements and certifications<textarea id="achievements" name="achievements" rows="3" placeholder="List awards, certificates, workshops or achievements"></textarea></label>
+        <label class="full-width">Projects<textarea id="projects" name="projects" rows="4" placeholder="Project title — short description — technologies used"></textarea></label>
+      </div>
+      <div class="form-actions"><button class="button button-primary" type="submit" id="save-button">Save portfolio</button><button class="button button-outline" type="reset" id="clear-button">Clear form</button><button class="text-button hidden" type="button" id="cancel-edit">Cancel editing</button></div>
+      <p id="form-message" class="form-message" role="status"></p>
+    </form>
+
+    <section class="records-section">
+      <div class="section-heading compact"><div><p class="eyebrow">PORTFOLIO DIRECTORY</p><h2>Saved student portfolios</h2><p class="muted">Search and manage the records stored in the database.</p></div></div>
+      <div class="search-row"><input id="search-input" type="search" placeholder="Search by student name or register number"><button class="button button-primary" id="search-button">Search</button><button class="button button-outline" id="show-all-button">Show all</button></div>
+      <div id="student-list" class="student-list"><p class="muted">Loading portfolios…</p></div>
+    </section>
+  </main>
+  <footer><span>© 2026 Student Portfolio Management System</span><span>Designed for student growth.</span></footer>
+</body>
+</html>
